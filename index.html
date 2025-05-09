@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vavada Casino - Welcome Bonus</title>
+  <link rel="stylesheet" href="/src/assets/styles.css">
+  <link rel="stylesheet" href="/src/assets/burger.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="">
+        <img src="/public/logo.svg" alt="Vavada Logo" class="header__logo">
+      </a>
+
+      <button class="header__burger" aria-label="Toggle menu">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Review</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Bonus</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Spins</a></li>
+        </ul>
+
+        <div class="header__auth">
+          <a href="#" class="btn btn--login">Login</a>
+          <a href="#" class="btn btn--register">Registration</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <h1 class="content__title">Vavada Casino</h1>
+      <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus
+        hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in
+        nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+
+      <div class="banner-carousel">
+        <div class="banner active" style="background-image: url('/public/banner2.jpg')">
+          <div class="banner__overlay"></div>
+          <div class="banner__content">
+            <h2 class="banner__title">Free bonus</h2>
+            <button class="banner__btn">Get bonus</button>
+          </div>
+        </div>
+
+        <div class="banner" style="background-image: url('/public/banner1.jpg')">
+          <div class="banner__overlay"></div>
+          <div class="banner__content">
+            <h2 class="banner__title">Special offer</h2>
+            <button class="banner__btn">Claim now</button>
+          </div>
+        </div>
+
+        <div class="banner" style="background-image: url('/public/banner3.jpg')">
+          <div class="banner__overlay"></div>
+          <div class="banner__content">
+            <h2 class="banner__title">Free bonus</h2>
+            <button class="banner__btn">Get bonus</button>
+          </div>
+        </div>
+
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+      </div>
+
+      <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus
+        hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in
+        nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item"><a href="#" class="footer__nav-link">Contacts</a></li>
+          <li class="footer__nav-item"><a href="#" class="footer__nav-link">Rules</a></li>
+          <li class="footer__nav-item"><a href="#" class="footer__nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__payments">
+        <img src="/public/visa.png" alt="Visa" class="footer__payment-icon">
+        <img src="/public/maestro.svg" alt="Maestro" class="footer__payment-icon">
+        <img src="/public/skrill.png" alt="Skrill" class="footer__payment-icon">
+      </div>
+
+      <div class="footer__copyright">
+        Copyright 2025 vavada.com
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="/src/js/carousel.js"></script>
+<script src="/src/js/burgerMenu.js"></script>
+
+</html>

@@ -1,0 +1,375 @@
+:root {
+  --primary-color: #1e1e2d;
+  --secondary-color: #2a2a3c;
+  --accent-color: #ff5b00;
+  --text-color: #ffffff;
+  --text-secondary: #b3b3b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn--login {
+  height: 100%;
+  background: #0ff;
+  line-height: 2.1333rem;
+  font-size: .8rem;
+  padding: 0 .8rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: .5333rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: #030303;
+  flex-shrink: 0;
+}
+
+.btn--login:hover {
+  background-color: rgb(58, 240, 240);
+}
+
+.btn--register {
+  height: 100%;
+  background: #cf0e48;
+  color: #fff;
+  line-height: 2.1333rem;
+  font-size: .8rem;
+  padding: 0 .8rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: .5333rem;
+  box-sizing: border-box;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.btn--register:hover {
+  background-color: #d60342;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.header__nav-item {
+  margin: 0 15px;
+}
+
+.header__nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: var(--accent-color);
+}
+
+
+.content {
+  padding: 40px 0;
+}
+
+.content__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.content__text {
+  margin-bottom: 30px;
+  color: var(--text-secondary);
+}
+
+.banner-carousel {
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner.active {
+  opacity: 1;
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.banner__title {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgb(235, 235, 235);
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.banner__btn {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.banner__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner__btn.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  padding: 30px 0 20px;
+  margin-top: 40px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__nav-list {
+  display: flex;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footer__nav-item {
+  margin-right: 20px;
+}
+
+.footer__nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__nav-link:hover {
+  color: var(--accent-color);
+}
+
+.footer__payments {
+  display: flex;
+  align-items: center;
+}
+
+.footer__payment-icon {
+  cursor: pointer;
+  width: 50px;
+  margin-right: 15px;
+}
+
+.footer__copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #3b3b4f;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    margin-right: 15px;
+  }
+
+  .header__nav {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .header__auth {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__nav-list {
+    justify-content: center;
+  }
+
+  .footer__payments {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .banner {
+    height: 250px;
+    background-image: url('https://vavada12sa.com/img/main_banner_slides/maxbet.desktop.9ec97efd93732a13bab286815c49bc85.jpg');
+  }
+}
+
+@media (max-width: 400px) {
+  .header__nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__nav-item {
+    margin: 5px 10px;
+  }
+
+  .footer__nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__nav-item {
+    margin: 5px 0;
+  }
+
+  .banner {
+    height: 200px;
+    background-image: url('https://via.placeholder.com/400x200/2a2a3c/ffffff?text=Vavada+Casino');
+  }
+
+  .banner__title {
+    font-size: 32px;
+  }
+}
